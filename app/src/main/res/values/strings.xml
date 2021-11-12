@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Kaspin</string>
+    <string name="title_activity_nav" translatable="false">NavActivity</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Products</string>
+    <string name="menu_slideshow">Transactions</string>
+
+    <string name="tn_product_image" translatable="false">tn_product</string>
+    <string name="desc_logo" translatable="false">Product Image</string>
+
+    <string name="placeholder_stock">Stock: %1$d</string>
+    <string name="placeholder_quantity">Qty: %1$d</string>
+    <string name="checkout_cart_title">%1$d items in your cart</string>
+
+    <string name="product_detail_new">New Product</string>
+    <string name="product_detail_edit">Edit Product</string>
+    <string name="product_detail_hint_title">Title</string>
+    <string name="product_detail_hint_code">Product Code</string>
+    <string name="product_detail_hint_image">Image Url</string>
+    <string name="product_detail_hint_category">Category</string>
+    <string name="product_detail_hint_stock">Stock</string>
+    <string name="product_detail_hint_price">Price</string>
+
+    <string name="action_create">Create</string>
+    <string name="action_update">Update</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_restore">Restore</string>
+
+    <string name="dialog_new_transaction">New Transaction</string>
+    <string name="dialog_to_home">Take Me Home</string>
+
+</resources>

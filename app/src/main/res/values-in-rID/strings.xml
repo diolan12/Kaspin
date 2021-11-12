@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kaspin</string>
+    <string name="menu_slideshow">Transaksi</string>
+    <string name="menu_gallery">Produk</string>
+    <string name="menu_home">Beranda</string>
+    <string name="action_settings">Setelan</string>
+    <string name="placeholder_stock">Stok: %1$d</string>
+    <string name="product_detail_new">Produk Baru</string>
+    <string name="product_detail_edit">Ubah Produk</string>
+    <string name="product_detail_hint_title">Judul</string>
+    <string name="product_detail_hint_image">Url Gambar</string>
+    <string name="action_create">Buat</string>
+    <string name="action_update">Perbarui</string>
+    <string name="action_delete">Hapus</string>
+    <string name="product_detail_hint_stock">Stok</string>
+    <string name="product_detail_hint_price">Harga</string>
+    <string name="product_detail_hint_category">Kategori</string>
+    <string name="action_restore">Pulihkan</string>
+    <string name="product_detail_hint_code">Kode Produk</string>
+    <string name="placeholder_quantity">Jumlah: %1$d</string>
+    <string name="checkout_cart_title">%1$d barang di keranjang anda</string>
+    <string name="dialog_new_transaction">Transaksi Baru</string>
+    <string name="dialog_to_home">Home</string>
+</resources>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.product.detail.ProductDetailActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/detail_product_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_margin="8dp"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <ImageView
+                android:id="@+id/detail_product_image_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/product"
+                android:contentDescription="@string/product_detail_hint_image"
+                android:transitionName="@string/tn_product_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/detail_product_button_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:translationZ="4dp"
+            android:text="Check Image"
+            app:layout_constraintTop_toBottomOf="@id/detail_product_image_container"
+            app:layout_constraintEnd_toEndOf="@id/detail_product_image_container"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detail_product_form_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/detail_product_button_check"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/detail_product_title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="@string/product_detail_hint_title"
+                app:layout_constraintTop_toTopOf="parent">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/detail_product_title"
+                    android:maxLines="1"
+                    android:inputType="textCapWords"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/detail_product_code_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:helperText="Panjang karakter 8"
+                app:endIconMode="custom"
+                app:endIconContentDescription="Randomize Code"
+                app:endIconDrawable="@drawable/ic_baseline_code_24"
+                android:hint="@string/product_detail_hint_code"
+                app:layout_constraintTop_toBottomOf="@id/detail_product_title_layout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/detail_product_code"
+                    android:maxLines="1"
+                    android:maxLength="8"
+                    android:inputType="number"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/detail_product_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="@string/product_detail_hint_image"
+                app:layout_constraintTop_toBottomOf="@id/detail_product_code_layout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/detail_product_image"
+                    android:maxLines="1"
+                    android:inputType="textUri"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/detail_product_category_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:hint="@string/product_detail_hint_category"
+                app:layout_constraintTop_toBottomOf="@id/detail_product_image_layout">
+                <AutoCompleteTextView
+                    android:id="@+id/detail_product_category"
+                    android:maxLines="1"
+                    android:inputType="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/detail_product_stock_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="@string/product_detail_hint_stock"
+                app:layout_constraintTop_toBottomOf="@id/detail_product_category_layout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/detail_product_stock"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/detail_product_price_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="@string/product_detail_hint_price"
+                app:layout_constraintTop_toBottomOf="@id/detail_product_stock_layout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/detail_product_price"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/detail_product_form_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:id="@+id/detail_product_action_create"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create"
+                android:layout_margin="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/detail_product_action_update"/>
+
+            <Button
+                android:id="@+id/detail_product_action_update"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:layout_margin="8dp"
+                app:layout_constraintTop_toBottomOf="@id/detail_product_action_create"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/detail_product_action_delete"/>
+
+            <Button
+                android:id="@+id/detail_product_action_delete"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/action_delete"
+                android:layout_margin="8dp"
+                app:layout_constraintTop_toBottomOf="@id/detail_product_action_update"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/detail_product_action_restore"/>
+
+            <Button
+                android:id="@+id/detail_product_action_restore"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/action_restore"
+                android:layout_margin="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
